@@ -34,6 +34,14 @@ Any living organism with more than three live neighbours dies, as if by overpopu
 If the organism dies, the land it occupied gets empty.
 ```
 
+### What this repo holds?
+```
+Implementation of Conway's game of life in C++ and python.
+A major drawback of this implementation is the size of the playground that hosts the evolution.
+These implementations cannot withstand a rectangular playground, they work only on square playgrounds.
+```
+
+
 ### Is this simulation of any use?
 ```
 The Game of Life motivated the use of cellular automata in the rich field of complexity science, 
