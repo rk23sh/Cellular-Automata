@@ -6,6 +6,8 @@ Conway's game of life uses the following set of rules to produce simulation :-
 4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 */
 
+
+
 #include<iostream>
 #include<chrono>
 #include<thread>
@@ -14,8 +16,8 @@ Conway's game of life uses the following set of rules to produce simulation :-
 using namespace std;
 
 // size of host that hosts the evolving organisms
-int x = 30;
-int y = 30;
+int x = 50;
+int y = 40;
 
 int alive(vector<vector<char>> matrix,int i,int j){
     if((0<=i and i<x) and (0<=j and j<y)){

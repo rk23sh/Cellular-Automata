@@ -10,7 +10,7 @@ Conway's game of life uses the following set of rules to produce simulation :-
 
 # host ground dimensions
 x = 30
-y = 30
+y = 40
 
 
 def alive(matrix, i, j):
@@ -25,27 +25,27 @@ def countNeighbours(matrix, i, j):
             alive(matrix, i, j + 1) + alive(matrix, i + 1, j - 1) + alive(matrix, i + 1, j) + alive(matrix, i + 1,
                                                                                                     j + 1)
 
-    isAlive = True if matrix[i][j] == 'X' else False
+    isAlive = alive(matrix, i, j)
     return isAlive, count
 
 
 def cglife():
     # 'matrix' produces first generation of organisms
-    matrix = [['.' for _ in range(x)] for _ in range(y)]
+    matrix = [['.' for _ in range(y)] for _ in range(x)]
     matrix[10][10] = matrix[10][11] = matrix[11][10] = matrix[12][10] = matrix[11][9] = 'X'
 
     while True:
         # 'mat' produces next generation of organisms
-        mat = [['.' for _ in range(x)] for _ in range(y)]
+        mat = [['.' for _ in range(y)] for _ in range(x)]
         for i in range(x):
             for j in range(y):
                 alive, count = countNeighbours(matrix, i, j)
 
-                if alive and count > 3:
+                if alive == 1 and count > 3:
                     mat[i][j] = '.'
-                elif alive and count < 2:
+                elif alive == 1 and count < 2:
                     mat[i][j] = '.'
-                elif not alive and count == 3:
+                elif alive == 0 and count == 3:
                     mat[i][j] = 'X'
                 else:
                     mat[i][j] = matrix[i][j]
