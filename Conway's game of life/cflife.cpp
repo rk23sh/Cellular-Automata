@@ -6,8 +6,6 @@ Conway's game of life uses the following set of rules to produce simulation :-
 4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 */
 
-
-
 #include<iostream>
 #include<chrono>
 #include<thread>
