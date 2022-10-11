@@ -4,6 +4,7 @@ The Game of Life is a cellular automaton devised by the British mathematician Jo
 It's basically a simulation, that describes the evolution of an organism under a certain set of rules.
 ```
 ```
+Note: playground is to earth, as organism is to human
 The playground hosting evolution looks kinda this:
 
 .........................
